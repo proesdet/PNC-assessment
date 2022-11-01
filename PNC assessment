@@ -1,0 +1,37 @@
+ @Test
+    public void basedCity() {
+        String BASE_URL = "https://restcountries.com/v3.1/capital/";
+        Object str = given()
+                .when().log().all()
+                .get(BASE_URL+"Tashkent").as(Object.class);
+        System.out.println(str.toString());
+    }
+
+// @Test
+// public void positiveTest(){
+//        baseURI="https://restcountries.com";
+//        given()
+//                .when()
+//                .get("/Washington D.C")
+//                .then()
+//                .statusCode(equalTo(200))
+//                .header("Content-Type","application/json")
+//                .header("content-encoding","gzip")
+//                .body("capital", equalTo("Washington, D.C."))
+//                .header("Keep-Alive","timeout=5, max=100")
+//                .log().all().assertThat();
+
+
+// @Test
+// public void negativeTest(){
+//        baseURI="https://restcountries.com";
+//        given()
+//                .when()
+//                .get("/Washing D.C")
+//                .then()
+//                .statusCode(equalTo(200))
+//                .header("Content-Type","application/json")
+//                .header("content-encoding","gzip")
+//                .body("capital", equalTo("Washington, D.C."))
+//                .header("Keep-Alive","timeout=5, max=100")
+//                .log().all().assertThat();
